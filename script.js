@@ -1,14 +1,15 @@
 function decimalToBinary(num) {
   //Write you code here
-	let str = "";
-	let c = 0;
+	var num = 10;
+var arr = [];
+let c = 0;
+var rem = 0;
   while(num>0){
-	  let rem = num%2;
-	  str += rem;
-	  num = num/2;
+	  rem = num%2;
+	  arr[c++] = rem;
+	  num = Math.floor(num/2);
   }
-  	
-	return str.split("").reverse().join("");
+	return arr.reverse();
 }
 
 window.decimalToBinary = decimalToBinary;
